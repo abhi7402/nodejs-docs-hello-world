@@ -111,6 +111,9 @@ jobs:
         with:
           app-name: dipendra-staging-app-hthxe6e5cpdgg6dd 
           package: dist/
+      
+      - name: Debug - List App Services in RG
+        run: az webapp list --resource-group dipendra-rg --query "[].name" -o table
 
   deploy-prod:
     needs: deploy-staging  
