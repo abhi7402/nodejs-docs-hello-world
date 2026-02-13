@@ -115,6 +115,9 @@ jobs:
       - name: Debug - List App Services in RG
         run: az webapp list --resource-group dipendra-rg --query "[].name" -o table
 
+      - name: Debug - List all App Services in subscription
+        run: az webapp list --query "[].{Name:name, ResourceGroup:resourceGroup, Location:location}" -o table
+
   deploy-prod:
     needs: deploy-staging  
     runs-on: ubuntu-latest
