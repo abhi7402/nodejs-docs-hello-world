@@ -10,7 +10,7 @@
         "lint": "eslint",
         "format": "prettier --single-quote --write *.js",
         "test": "jest",
-        "build": "mkdir -p dist && cp index.js package.json dist/"
+        "build": "npm ci && rm -rf dist && mkdir -p dist && cp -r index.js package.json node_modules dist/"
     },
     "devDependencies": {
         "eslint": "^7.5.0",
