@@ -109,7 +109,7 @@ jobs:
       - name: Deploy to Staging
         uses: azure/webapps-deploy@v3
         with:
-          app-name: dipendra-staging-app-hthxe6e5cpdgg6dd.centralindia-01.azurewebsites.net
+          app-name: dipendra-staging-app
           package: dist/
       
       - name: Debug - List App Services in RG
@@ -143,5 +143,5 @@ jobs:
       - name: Deploy to Production
         uses: azure/webapps-deploy@v3
         with:
-          app-name: dipendra-production-app-cxe9eff4e2atbjhq.centralindia-01.azurewebsites.net
+          app-name: dipendra-production-app
           package: dist/
